@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Popdown Menu</title>
+<style>
+  /* Styles for the popdown menu */
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: black; /* Full black background */
+  }
+
+  .popdown-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .popdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .popdown-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin: 0 10px;
+    z-index: 1; /* Ensure button stays on top */
+  }
+
+  .popdown-btn:hover {
+    background-color: #45a049;
+  }
+
+  .popdown-content {
+    display: none;
+    position: absolute;
+    background-color: #3498db; /* Blue background color */
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  .popdown-content a {
+    color: white; /* Text color changed to white */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+  }
+
+  .popdown-content a:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+  }
+
+  .popdown:hover .popdown-content {
+    display: block;
+  }
+  
+  .bird {
+    width: 100px;
+    height: auto;
+    opacity: 0.7;
+    transition: transform 0.3s;
+    margin: 10px;
+  }
+  
+  .bird:hover {
+    transform: scale(1.3); /* Zoom effect */
+  }
+  
+  /* Styles for the dashboard */
+  .container1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: 50px;
+  }
+
+  .logo img {
+    width: 150px;
+    margin-bottom: 20px;
+  }
+
+  .nav__links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  .nav__links li {
+    margin-bottom: 10px;
+  }
+
+  .nav__links a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+  }
+
+  .nav__links a:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+
+<div class="container1">
+    <div class="logo">
+        <img src="logo.png" alt="Logo">
+    </div>
+    <ul class="nav__links">
+        <li><a href="C:\Users\Mathew Fedrick 13\Downloads\CogniCare-main\CogniCare-main\SIH\index.html">Home</a></li>
+        <li><a href="C:\Users\Mathew Fedrick 13\Downloads\CogniCare-main\CogniCare-main\SIH\contact.html">Contact</a></li>
+        <li><a href="C:\Users\Mathew Fedrick 13\Downloads\CogniCare-main\CogniCare-main\SIH\about.html">About</a></li>
+    </ul>
+</div>
+
+<div class="popdown-container">
+  <div class="popdown">
+    <!-- Left bird -->
+    <img src="C:\Users\Mathew Fedrick 13\Downloads\CogniCare-main\CogniCare-main\SIH\img2.jpeg" alt="Bird" class="bird">
+    
+    <!-- Popdown button -->
+    <div class="popdown">
+      <button class="popdown-btn">Games</button>
+      <div class="popdown-content">
+        <a href="C:\Users\Mathew Fedrick 13\Downloads\CogniCare-main\CogniCare-main\SIH\Memory_game\index.html">Memory Game</a>
+        <a href="C:\Users\Mathew Fedrick 13\Downloads\CogniCare-main\CogniCare-main\SIH\Reasoning assessment\index.html">Reasoning assessment</a>
+        <a href="C:\Users\Mathew Fedrick 13\Downloads\CogniCare-main\CogniCare-main\SIH\Productivity challenge\index.html">Productivity challenge</a>
+      </div>
+    </div>
+    
+    <!-- Right bird -->
+    <img src="C:\Users\Mathew Fedrick 13\Downloads\CogniCare-main\CogniCare-main\SIH\bird 1.jpeg" alt="Bird" class="bird">
+  </div>
+</div>
+
+</body>
+</html>
